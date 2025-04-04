@@ -1,0 +1,42 @@
+@use '../abstracts/mixins' as  mixin;
+
+
+// Header general
+header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4.5rem;
+
+    .login {
+
+        ul {
+            @include mixin.reset-list();
+            gap: 2.5rem;
+            
+            li {
+                &:nth-child(3) {
+                    margin-left: 2rem;
+                }
+                .search, .bag {
+                    img {
+                        width: 1.3rem;
+                    }
+                }
+
+                .signin {
+                    @include mixin.btn-nav();
+                    text-decoration: underline;
+                    text-decoration-thickness: 1px;
+                }
+
+                .signup {
+                    @include mixin.button();
+                }
+            }
+
+        }   
+    }
+}

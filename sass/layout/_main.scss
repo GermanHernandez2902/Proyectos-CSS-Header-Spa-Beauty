@@ -1,0 +1,127 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mixin;
+
+// Main de la página
+.main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+        'hero comentaries'
+        'categories comentaries';
+}
+
+// Sección hero
+.hero {
+    grid-area: hero;
+    padding-top: 1.5rem;
+    margin-bottom: 5rem;
+    width: 80%;
+
+    &__title {
+        font-size: 3.5rem;
+        color: var.$blue;
+        line-height: 4.5rem;
+        margin-bottom: 1.8rem;
+    }
+
+    &__subtitle {
+        font-size: 1.3rem;
+        color: var.$grey;
+        margin-bottom: 3.15rem;
+    }
+
+    &__play {
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+
+
+        &-book {
+            @include mixin.button();
+        }
+
+        &-video {
+            display: inline-flex;
+            align-items: center;
+            @include mixin.btn-nav();
+            gap: 1.8rem;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+}
+
+
+// Sección categories
+.categories {
+    grid-area: categories;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 4.5rem;
+
+    article {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 4.5rem;
+            margin-bottom: 1.35rem;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        p {
+            color: var.$grey;
+            text-align: center;
+        }
+    }
+
+}
+
+// Sección comentaries
+.comentaries {
+    grid-area: comentaries;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    article {
+        padding: 1.35rem;
+
+        img {
+            width: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h4 {
+            margin-top: 0.5rem;
+            font-size: 700;
+            color: var.$blue;
+        }
+
+        &.first {
+            width: 66%;
+            background-color: hsla(36, 33%, 97%, 0.614);
+            border-radius: 1rem;
+            align-self: flex-end;
+            margin-bottom: 3.65rem;
+            margin-right: -4.68rem;
+        }
+
+        &.second {
+            width: 65%;
+            background-color: hsla(36, 33%, 97%, 0.614);
+            border-radius: 1rem;
+            margin-left: 9rem;
+        }
+    }
+
+}

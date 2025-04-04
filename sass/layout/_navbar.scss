@@ -1,0 +1,41 @@
+@use '../abstracts/mixins' as mixin;
+@use '../abstracts/variables' as var;
+
+// Menú de navegación principal
+.principal-nav ul {
+    @include mixin.reset-list();
+    gap: 3rem;
+
+    li {
+        a{
+            @include mixin.btn-nav();
+            padding: .5rem .5rem;
+        }
+
+        .dropdown {
+            position: relative;
+
+            &-toggle {
+                display: inline-flex;
+            }
+
+            // submenú de navegación
+            &-menu {
+            position: absolute;
+            display: none;
+            box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+
+            a {
+                display: block;
+                padding: .5rem .5rem;
+            }
+           }
+        }
+    }
+}
+
+// Despliega el submenú de navegación
+.principal-nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+}
