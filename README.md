@@ -26,14 +26,11 @@ Este proyecto presenta una interfaz moderna y responsiva que permite a los clien
 
 ---
 
-🌍🚀 Demo en Vivo 🎉  
-🔗 [Ver Demo](https://tu-enlace-de-despliegue.com/) 
-
----
-
 🤝 Contribuciones
 Si deseas mejorar este proyecto, ¡eres bienvenido!
 Puedes hacer un fork del repositorio, realizar cambios y enviar un pull request. 😊
+
+--- 
 
 📌 Licencia: Este proyecto es de uso libre. Siéntete libre de adaptarlo y mejorarlo según tus necesidades.
 
