@@ -37,5 +37,5 @@ Puedes hacer un fork del repositorio, realizar cambios y enviar un pull request.
 
 --- 
 
-📌 Licencia: Este proyecto es de uso libre. Siéntete libre de adaptarlo y mejorarlo según tus necesidades.
+📌 Licencia Este proyecto es de uso libre. Siéntete libre de adaptarlo y mejorarlo según tus necesidades.
 
